@@ -1,7 +1,7 @@
+import { useState } from 'react';
 import axios from 'axios';
 import styles from '../../app/page.module.css'
 import { Caveat } from 'next/font/google'
-import { useState } from 'react';
 
 const caveat = Caveat({ subsets: ['latin'] });
 
@@ -21,6 +21,8 @@ export const Form = (): JSX.Element => {
   });
 
   const { firstname, lastname, email, phone } = formData;
+
+  const isFormEmpty = !firstname || !lastname || !email || !phone;
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -87,7 +89,7 @@ export const Form = (): JSX.Element => {
           </div>
         </div>
         <div className={styles.form__btn_container}>
-          <button type="submit">
+          <button type="submit" disabled={isFormEmpty}>
             enviar
           </button>
         </div>

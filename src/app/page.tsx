@@ -4,11 +4,8 @@ import axios from 'axios';
 import { MenuCard } from '@/components/MenuCard'
 import styles from './page.module.css'
 import { Header } from '@/components/Header'
-import Image from 'next/image';
-import { Open_Sans } from 'next/font/google'
 import { Card } from '@/components/Card';
 import { Form } from '@/components/Form';
-const openSans = Open_Sans({ subsets: ['latin'] });
 
 interface dataInterface {
   category: string;

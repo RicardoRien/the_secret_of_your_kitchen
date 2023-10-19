@@ -186,6 +186,10 @@
   padding:  6px;
 }
 
+.form__input > input:focus {
+  border: 1px solid #d8ad3d;
+}
+
 .form button {
   background-color: #d8ad3d;
   color: white;
@@ -194,6 +198,15 @@
   border: 0;
   padding: 15px 25px;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.form button:hover {
+  background-color: #009CD9;
+}
+
+.form button:disabled {
+  background-color: gray;
 }
 
 .form__btn_container {
